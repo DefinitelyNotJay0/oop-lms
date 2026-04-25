@@ -1,0 +1,243 @@
+/* Enrollment */
+.enrollment-banner {
+  background: linear-gradient(135deg, var(--teal-700), var(--teal-500));
+  border-radius: var(--radius-lg);
+  padding: 24px 28px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 28px;
+  color: white;
+}
+
+.enrollment-banner-left {}
+
+.enrollment-banner-label {
+  font-size: 12px;
+  opacity: 0.8;
+  margin-bottom: 4px;
+}
+
+.enrollment-banner-units {
+  font-family: var(--font-display);
+  font-size: 30px;
+  font-weight: 800;
+  margin-bottom: 4px;
+}
+
+.enrollment-banner-note {
+  font-size: 13px;
+  opacity: 0.85;
+}
+
+.btn-slip {
+  background: white;
+  color: var(--teal-700);
+  border: none;
+  padding: 10px 20px;
+  border-radius: var(--radius-full);
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-slip:hover {
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-md);
+}
+
+/* Course cards grid */
+.course-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  margin-bottom: 28px;
+}
+
+.course-card {
+  background: var(--white);
+  border: 1px solid var(--neutral-200);
+  border-radius: var(--radius-lg);
+  padding: 20px;
+  transition: all 0.2s;
+}
+
+.course-card:hover {
+  border-color: var(--teal-300);
+  box-shadow: var(--shadow-sm);
+}
+
+.course-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 14px;
+}
+
+.course-code {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  color: var(--teal-600);
+  margin-bottom: 4px;
+}
+
+.course-name {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--neutral-900);
+  line-height: 1.2;
+}
+
+.enrolled-badge {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--teal-600);
+  background: var(--teal-50);
+  padding: 4px 10px;
+  border-radius: var(--radius-full);
+  border: 1px solid var(--teal-200);
+  white-space: nowrap;
+}
+
+.course-details {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-bottom: 14px;
+}
+
+.course-detail {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 12.5px;
+  color: var(--neutral-500);
+}
+
+.course-detail svg { color: var(--neutral-400); flex-shrink: 0; }
+
+.course-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 12px;
+  border-top: 1px solid var(--neutral-100);
+}
+
+.course-units {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--neutral-500);
+}
+
+.btn-details {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--neutral-900);
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  transition: color 0.15s;
+}
+
+.btn-details:hover { color: var(--teal-700); }
+
+/* Available courses table */
+.available-table {
+  background: var(--white);
+  border: 1px solid var(--neutral-200);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+
+.available-table-header {
+  padding: 20px 24px 12px;
+  border-bottom: 1px solid var(--neutral-100);
+}
+
+.available-table-title {
+  font-family: var(--font-display);
+  font-size: 18px;
+  font-weight: 800;
+  color: var(--neutral-900);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+thead tr {
+  background: var(--neutral-50);
+}
+
+th {
+  padding: 10px 20px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: var(--neutral-400);
+  text-align: left;
+}
+
+tbody tr {
+  border-top: 1px solid var(--neutral-100);
+  transition: background 0.15s;
+}
+
+tbody tr:hover { background: var(--teal-50); }
+
+td {
+  padding: 14px 20px;
+  font-size: 13.5px;
+  color: var(--neutral-700);
+}
+
+.td-code {
+  font-weight: 600;
+  color: var(--teal-600);
+}
+
+.td-prereq {
+  font-size: 12px;
+  color: var(--neutral-500);
+  font-weight: 500;
+}
+
+.slots-badge {
+  font-size: 11px;
+  font-weight: 700;
+  padding: 3px 9px;
+  border-radius: var(--radius-full);
+}
+
+.slots-good { background: var(--teal-100); color: var(--teal-700); }
+.slots-warn { background: var(--orange-100); color: var(--orange-500); }
+.slots-low { background: var(--red-100); color: var(--red-500); }
+
+.btn-add {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  background: var(--teal-600);
+  color: white;
+  padding: 7px 14px;
+  border-radius: var(--radius-full);
+  font-size: 12.5px;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-add:hover {
+  background: var(--teal-700);
+  transform: translateY(-1px);
+}

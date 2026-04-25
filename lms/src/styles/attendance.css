@@ -1,0 +1,214 @@
+/* Attendance */
+.attendance-top {
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  gap: 16px;
+  margin-bottom: 28px;
+}
+
+.attendance-overall {
+  background: var(--white);
+  border: 1px solid var(--neutral-200);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.ring-wrapper {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  margin-bottom: 16px;
+}
+
+.ring-svg {
+  transform: rotate(-90deg);
+}
+
+.ring-bg {
+  fill: none;
+  stroke: var(--neutral-100);
+  stroke-width: 10;
+}
+
+.ring-fill {
+  fill: none;
+  stroke: var(--teal-500);
+  stroke-width: 10;
+  stroke-linecap: round;
+  stroke-dasharray: 251.2;
+  stroke-dashoffset: 17.6; /* (1 - 0.93) * 251.2 */
+  transition: stroke-dashoffset 0.8s ease;
+}
+
+.ring-text {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.ring-pct {
+  font-family: var(--font-display);
+  font-size: 22px;
+  font-weight: 800;
+  color: var(--neutral-900);
+}
+
+.overall-status {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--teal-600);
+  margin-bottom: 6px;
+}
+
+.overall-note {
+  font-size: 12px;
+  color: var(--neutral-400);
+  line-height: 1.4;
+}
+
+/* Recent activity */
+.recent-card {
+  background: var(--white);
+  border: 1px solid var(--neutral-200);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+}
+
+.recent-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.recent-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.recent-status-icon {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-top: 2px;
+  font-size: 11px;
+}
+
+.status-present { background: var(--teal-100); color: var(--teal-700); }
+.status-late { background: var(--orange-100); color: var(--orange-500); }
+.status-absent { background: var(--red-100); color: var(--red-500); }
+
+.recent-course {
+  font-size: 12.5px;
+  font-weight: 700;
+  color: var(--neutral-800);
+}
+
+.recent-date { font-size: 11px; color: var(--neutral-400); }
+
+.recent-status-label {
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.label-present { color: var(--teal-600); }
+.label-late { color: var(--orange-500); }
+.label-absent { color: var(--red-500); }
+
+/* By course */
+.att-course-card {
+  background: var(--white);
+  border: 1px solid var(--neutral-200);
+  border-radius: var(--radius-lg);
+  padding: 20px 24px;
+  margin-bottom: 12px;
+  transition: all 0.2s;
+}
+
+.att-course-card:hover {
+  border-color: var(--teal-300);
+  box-shadow: var(--shadow-sm);
+}
+
+.att-course-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 14px;
+}
+
+.att-course-name-block {}
+
+.att-course-code {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--teal-600);
+  margin-bottom: 2px;
+}
+
+.att-course-name {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--neutral-900);
+}
+
+.att-pct {
+  font-family: var(--font-display);
+  font-size: 22px;
+  font-weight: 800;
+}
+
+.att-pct.good { color: var(--teal-600); }
+.att-pct.warn { color: var(--orange-500); }
+
+.att-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+.att-stat {
+  background: var(--neutral-50);
+  border: 1px solid var(--neutral-100);
+  border-radius: var(--radius-sm);
+  padding: 12px;
+  text-align: center;
+}
+
+.att-stat-value {
+  font-size: 20px;
+  font-weight: 800;
+  display: block;
+  margin-bottom: 2px;
+}
+
+.att-stat-value.present { color: var(--teal-600); }
+.att-stat-value.late { color: var(--orange-500); }
+.att-stat-value.absent { color: var(--red-500); }
+
+.att-stat-label { font-size: 11px; color: var(--neutral-400); }
+
+.att-bar {
+  height: 5px;
+  background: var(--neutral-100);
+  border-radius: var(--radius-full);
+  overflow: hidden;
+}
+
+.att-bar-fill {
+  height: 100%;
+  background: var(--teal-500);
+  border-radius: var(--radius-full);
+}
